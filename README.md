@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+## Описание проекта
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это приложение позволяет просматривать самые популярные TypeScript проекты на GitHub, отсортированные по количеству звезд. Приложение использует GitHub REST API для получения данных о репозиториях и отображает их в удобном интерфейсе.
 
-Currently, two official plugins are available:
+## Функциональные возможности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Получение списка самых популярных TypeScript проектов с GitHub.
+- Отображение основных данных о каждом проекте: название, описание, количество звезд, и ссылка на репозиторий.
+- Поддержка поиска проектов по ключевым словам.
+- Изменение типа сортировки по количеству звёзд.
 
-## Expanding the ESLint configuration
+## Стек технологий
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** — основной JavaScript-фреймворк для разработки пользовательского интерфейса.
+- **Sass** — Для стилизации компонентов.
+- **TypeScript** — язык программирования, который является надстройкой над JavaScript, обеспечивающий статическую типизацию.
+- **GitHub REST API** — используется для получения данных о популярных TypeScript репозиториях.
+- **Axios** и **React-Query**— для выполнения HTTP-запросов к API.
 
-- Configure the top-level `parserOptions` property like this:
+## Установка и запуск проекта на локальном компьютере
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Клонируйте репозиторий с проектом:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    ```bash
+    git clone https://github.com/MaximKotovich/popular-ts-projects.git
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Перейдите в директорию проекта:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+    ```bash
+    cd popular-ts-projects
+    ```
+
+3. Установите зависимости:
+
+    ```bash
+    npm install
+    ```
+
+4. Запустите приложение в режиме разработки:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Откройте браузер и перейдите по адресу [http://localhost:5173/](http://localhost:5173/), чтобы увидеть приложение в действии.
