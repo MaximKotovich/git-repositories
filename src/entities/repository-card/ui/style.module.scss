@@ -1,0 +1,46 @@
+.card {
+  border: 1px solid white;
+  padding: 5px 20px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 30px;
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.01);
+  }
+
+  .owner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+
+    .avatar {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  .repository {
+    flex: 1;
+
+    .repositoryName {
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    .repositoryDescription {
+    }
+  }
+
+  .star {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 100px;
+    span {
+      font-size: 20px;
+    }
+  }
+}

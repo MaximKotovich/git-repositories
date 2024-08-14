@@ -1,0 +1,50 @@
+.container {
+  padding: 20px 20px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 5% 5% 80% 5%;
+  grid-gap: 5px;
+
+  .cardsHeader {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 5fr minmax(100px, 1fr);
+    gap: 30px;
+    padding: 5px 20px;
+    align-items: center;
+    border: 1px solid #cccccc;
+
+    .starOrder {
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      span {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .repositoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .pagination {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+
+    .selectCountItems {
+      flex: 1;
+    }
+  }
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+}
