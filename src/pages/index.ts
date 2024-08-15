@@ -1,1 +1,1 @@
-export { RepositoriesPage } from './repositories/ui/repositories.page.tsx'
+export { RepositoriesPage } from './repositories'

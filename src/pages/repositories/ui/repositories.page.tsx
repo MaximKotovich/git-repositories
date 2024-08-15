@@ -8,11 +8,12 @@ import { calculatePageCount } from '../lib/utils.ts'
 import { Pagination } from '../../../shared/ui-kit/pagination'
 import { Spinner } from '../../../shared/ui-kit/spinner'
 import { Search } from '../../../entities/search-input'
+import { SomethingWentWrong } from '../../../widgets'
 
 const languageParam = 'language:typescript'
 
 export const RepositoriesPage = (): ReactElement => {
-  const { mutate: getRepositoriesMutation, data, isPending } = useSearchRepositoriesByParams()
+  const { mutate: getRepositoriesMutation, data, isError, isPending } = useSearchRepositoriesByParams()
   const [queryParams, setQueryParams] = useState<RepositoriesQueryParams>({
     sort: 'stars',
     order: 'desc',
@@ -40,6 +41,10 @@ export const RepositoriesPage = (): ReactElement => {
 
   const handleChangeSort = (sort: string, order: 'asc' | 'desc'): void => {
     setQueryParams((prevState) => ({ ...prevState, sort, order }))
+  }
+
+  if (isError) {
+    return <SomethingWentWrong />
   }
 
   return (
