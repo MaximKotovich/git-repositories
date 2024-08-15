@@ -25,26 +25,30 @@
 
 1. Клонируйте репозиторий с проектом:
 
-    ```bash
-    git clone https://github.com/MaximKotovich/popular-ts-projects.git
-    ```
+   ```bash
+   git clone https://github.com/MaximKotovich/popular-ts-projects.git
+   ```
 
 2. Перейдите в директорию проекта:
 
-    ```bash
-    cd popular-ts-projects
-    ```
+   ```bash
+   cd popular-ts-projects
+   ```
 
 3. Установите зависимости:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 4. Запустите приложение в режиме разработки:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 5. Откройте браузер и перейдите по адресу [http://localhost:5173/](http://localhost:5173/), чтобы увидеть приложение в действии.
+
+## Примечания
+
+Возможности GitHub REST API не позволяют получить доступ к последующий после 1000 элементах без авторизации.
